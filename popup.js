@@ -37,6 +37,8 @@ submit.onclick = () => {
         chrome.storage.sync.set({ 'countdowns': countdowns }, () => {
             console.log('Value is set to ' + countdowns)
             window.close()
+            // open a new new tab page
+            chrome.tabs.create({ url: 'newtab.html' })
         })
     })
 }
